@@ -47,9 +47,9 @@ CREATE TABLE IF NOT EXISTS feedback (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
 );
 
--- Добавление тестового пользователя (пароль: admin123)
+-- Добавление тестового пользователя
 INSERT IGNORE INTO users (login, password, email) VALUES 
-('admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin@mail.ru');
+('admin', 'admin', 'admin@mail.ru');
 
 -- Добавление тестовой продукции
 INSERT IGNORE INTO products (name, description, price, image, category, characteristics, quantity) VALUES
